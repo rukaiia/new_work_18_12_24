@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Rukaiia
+      changes:
+        - addColumn:
+            tableName: note
+            columns:
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: true
+  - changeSet:
+      id: 2
+      author: your_username
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: note
+            baseColumnNames: user_id
+            constraintName: fk_note_user
+            referencedTableName: users
+            referencedColumnNames: id
+            onDelete: CASCADE
