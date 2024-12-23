@@ -4,7 +4,6 @@
     <section class="d-flex justify-content-center align-items-center" style="background: linear-gradient(135deg, #2d3436, #0984e3); height: 100vh; padding: 0;">
 
         <style>
-            /* Общий стиль страницы */
             body {
                 font-family: 'Roboto', sans-serif;
                 background: linear-gradient(135deg, #2d3436, #0984e3);
@@ -94,7 +93,6 @@
                 text-decoration: underline;
             }
 
-            /* Адаптивность для мобильных устройств */
             @media (max-width: 992px) {
                 .card {
                     margin: 1rem;
@@ -109,7 +107,6 @@
                 }
             }
 
-            /* Animation for fade-in effect */
             @keyframes fadeIn {
                 0% {
                     opacity: 0;

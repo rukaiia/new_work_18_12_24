@@ -7,7 +7,6 @@
         <title>Create New Note</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
-            /* Общий темный фон */
             body {
                 background: linear-gradient(135deg, #2c3e50, #34495e); /* Градиент от темно-синего к темно-серому */
                 font-family: 'Segoe UI', sans-serif;
@@ -16,53 +15,49 @@
                 padding: 0;
             }
 
-            /* Контейнер формы */
             .container {
                 max-width: 600px;
                 margin: 50px auto;
-                background: #2c3e50; /* Темный фон для контейнера */
+                background: #2c3e50;
                 border-radius: 15px;
-                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Легкая тень */
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
                 padding: 30px;
                 transition: all 0.3s ease;
             }
 
             .container:hover {
-                box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Увеличение тени при наведении */
+                box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
             }
 
-            /* Заголовок формы */
             h1 {
                 font-size: 2rem;
-                color: #8e44ad; /* Фиолетовый акцент */
+                color: #8e44ad;
                 text-align: center;
                 margin-bottom: 20px;
                 font-weight: bold;
                 text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
             }
 
-            /* Метки для полей */
             label {
                 font-weight: bold;
-                color: #ecf0f1; /* Светлый цвет для меток */
+                color: #ecf0f1;
                 margin-bottom: 5px;
                 display: block;
             }
 
-            /* Поля ввода */
             input[type="text"], textarea {
                 width: 100%;
-                border: 1px solid #34495e; /* Темная граница */
+                border: 1px solid #34495e;
                 border-radius: 10px;
                 padding: 10px;
                 font-size: 16px;
-                color: #ecf0f1; /* Светлый цвет текста */
-                background-color: #34495e; /* Темный фон для полей */
+                color: #ecf0f1;
+                background-color: #34495e;
                 transition: border-color 0.3s ease, box-shadow 0.3s ease;
             }
 
             input[type="text"]:focus, textarea:focus {
-                border-color: #8e44ad; /* Фиолетовый при фокусе */
+                border-color: #8e44ad;
                 box-shadow: 0 0 8px rgba(142, 68, 173, 0.5);
                 outline: none;
             }
@@ -71,9 +66,8 @@
                 resize: none;
             }
 
-            /* Кнопка */
             .btn-primary {
-                background-color: #8e44ad; /* Фиолетовый */
+                background-color: #8e44ad;
                 border: none;
                 font-size: 16px;
                 font-weight: bold;
@@ -86,17 +80,15 @@
             }
 
             .btn-primary:hover {
-                background-color: #6f2c91; /* Темный фиолетовый */
-                transform: translateY(-3px); /* Эффект поднятия */
+                background-color: #6f2c91;
+                transform: translateY(-3px);
             }
 
-            /* Анимации для кнопки */
             .btn-primary:active {
-                transform: translateY(1px); /* Эффект сжатия при клике */
+                transform: translateY(1px);
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             }
 
-            /* Адаптивность */
             @media (max-width: 768px) {
                 .container {
                     padding: 20px;

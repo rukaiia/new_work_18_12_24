@@ -69,8 +69,8 @@ public class NoteService {
     public void toggleCompleted(Long id) {
         Note note = noteRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Заметка не найдена"));
-        note.setCompleted(!note.isCompleted()); // Переключаем статус
-        noteRepository.save(note); // Сохраняем изменения
+        note.setCompleted(!note.isCompleted());
+        noteRepository.save(note);
     }
 
     public Note getById(Long noteId) {

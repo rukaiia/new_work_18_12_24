@@ -116,7 +116,6 @@
             color: #ff6b6b;
         }
 
-        /* Animation for page load */
         .container {
             animation: fadeIn 0.7s ease-in-out;
         }
@@ -130,7 +129,6 @@
             }
         }
 
-        /* Mobile responsiveness */
         @media (max-width: 768px) {
             .col-xl-8, .col-lg-10 {
                 width: 100%;

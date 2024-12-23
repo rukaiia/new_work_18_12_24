@@ -19,7 +19,5 @@ public interface NoteRepository extends JpaRepository<Note, Long> {
     List<Note> findByUserIdAndCompleted(Long userId, boolean completed);
 
 
-    List<Note> findByUserIdAndTitleContaining(Long userId, String title);  // Пример фильтрации по названию
 
-    List<Note> findByUserIdAndCreatedDateAfter(Long userId, LocalDateTime createdDate);  // Пример фильтрации по дате}
 }

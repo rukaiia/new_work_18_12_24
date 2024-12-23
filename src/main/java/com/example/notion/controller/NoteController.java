@@ -34,11 +34,11 @@ public class NoteController {
         User user = userService.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("Пользователь не найден"));
 
-        List<Note> notes = noteService.getNotesOfUser(user.getId(), filter); // Фильтруем заметки
+        List<Note> notes = noteService.getNotesOfUser(user.getId(), filter);
 
         model.addAttribute("user", user);
         model.addAttribute("notes", notes);
-        model.addAttribute("filter", filter); // Добавляем текущий фильтр для отображения
+        model.addAttribute("filter", filter);
 
         return "notes/notes";
     }
@@ -96,8 +96,8 @@ public class NoteController {
     }
     @PostMapping("/{id}/toggleCompleted")
     public String toggleCompleted(@PathVariable Long id) {
-        noteService.toggleCompleted(id); // Изменяем статус заметки
-        return "redirect:/notes"; // Возвращаемся на страницу заметок
+        noteService.toggleCompleted(id);
+        return "redirect:/notes";
     }
 
 

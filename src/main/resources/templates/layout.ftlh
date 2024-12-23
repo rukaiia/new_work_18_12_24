@@ -18,7 +18,6 @@
     </head>
     <body>
     <style>
-        /* Обновление навигационной панели */
         .navbar {
             background-color: #343a40;
             backdrop-filter: blur(5px);
@@ -51,12 +50,10 @@
             border-color: #d81b60;
         }
 
-        /* Основной контейнер */
         .container {
             margin-top: 100px; /* Добавим отступ сверху, чтобы контент не накладывался на navbar */
         }
 
-        /* Мобильная адаптивность */
         @media (max-width: 768px) {
             .navbar-brand {
                 font-size: 1.5rem;
@@ -66,7 +63,6 @@
             }
         }
 
-        /* Стилизация кнопок */
         .btn-create {
             background-color: #d81b60;
             color: white;
@@ -83,7 +79,6 @@
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
         }
 
-        /* Темная кнопка */
         .btn-dark-theme {
             background-color: #333;
             color: #fff;
@@ -100,7 +95,6 @@
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
         }
 
-        /* Добавим эффект для кнопок и ссылок */
         .btn, .nav-link {
             transition: transform 0.2s ease, background-color 0.3s ease;
         }
@@ -114,6 +108,7 @@
     <nav class="navbar navbar-expand-lg fixed-top mb-4 shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="/notes">Notion</a>
+            <a href="/pomodoro" class="btn btn-dark-theme m-2">Pomodoro</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">

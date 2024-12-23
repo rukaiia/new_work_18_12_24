@@ -17,7 +17,7 @@ public class Note {
     private String title;
     private String content;
     @ManyToOne
-    @JoinColumn(name = "user_id")  // связь с пользователем
+    @JoinColumn(name = "user_id")
     private User user;
     private LocalDateTime createdDate;
     private boolean completed;

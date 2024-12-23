@@ -7,62 +7,57 @@
         <title>Edit Note</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
-            /* Общий фон */
             body {
-                background: linear-gradient(135deg, #2c3e50, #34495e); /* Темный градиент */
+                background: linear-gradient(135deg, #2c3e50, #34495e);
                 font-family: 'Segoe UI', sans-serif;
-                color: #ecf0f1; /* Светлый текст */
+                color: #ecf0f1;
                 margin: 0;
                 padding: 0;
             }
 
-            /* Контейнер формы */
             .container {
                 max-width: 600px;
                 margin: 50px auto;
-                background: #1e2a3a; /* Темный фон для контейнера */
+                background: #1e2a3a;
                 border-radius: 15px;
-                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Глубокая тень */
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
                 padding: 30px;
                 transition: all 0.3s ease;
             }
 
             .container:hover {
-                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7); /* Увеличение тени при наведении */
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
             }
 
-            /* Заголовок формы */
             h1 {
                 font-size: 2rem;
-                color: #8e44ad; /* Ярко-фиолетовый */
+                color: #8e44ad;
                 text-align: center;
                 margin-bottom: 20px;
                 font-weight: bold;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             }
 
-            /* Метки для полей */
             label {
                 font-weight: bold;
-                color: #bdc3c7; /* Светлый серый */
+                color: #bdc3c7;
                 margin-bottom: 5px;
                 display: block;
             }
 
-            /* Поля ввода */
             input[type="text"], textarea {
                 width: 100%;
-                border: 1px solid #7f8c8d; /* Светлая граница */
+                border: 1px solid #7f8c8d;
                 border-radius: 10px;
                 padding: 10px;
                 font-size: 16px;
-                background-color: #34495e; /* Темный фон для полей */
-                color: #ecf0f1; /* Светлый текст */
+                background-color: #34495e;
+                color: #ecf0f1;
                 transition: border-color 0.3s ease, box-shadow 0.3s ease;
             }
 
             input[type="text"]:focus, textarea:focus {
-                border-color: #8e44ad; /* Фиолетовый при фокусе */
+                border-color: #8e44ad;
                 box-shadow: 0 0 8px rgba(142, 68, 173, 0.6);
                 outline: none;
             }
@@ -71,9 +66,9 @@
                 resize: none;
             }
 
-            /* Кнопка */
+
             .btn-primary {
-                background-color: #8e44ad; /* Ярко-фиолетовый */
+                background-color: #8e44ad;
                 border: none;
                 font-size: 16px;
                 font-weight: bold;
@@ -85,11 +80,10 @@
             }
 
             .btn-primary:hover {
-                background-color: #9b59b6; /* Более светлый фиолетовый */
+                background-color: #9b59b6;
                 transform: translateY(-3px);
             }
 
-            /* Адаптивность */
             @media (max-width: 768px) {
                 .container {
                     padding: 20px;
