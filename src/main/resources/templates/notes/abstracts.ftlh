@@ -194,15 +194,15 @@
     </head>
     <body>
     <div class="container">
-        <h1 class="text-center mb-4">Мои Задачи</h1>
+        <h1 class="text-center mb-4">Мои Конспекты</h1>
 
         <div class="filter-links mb-4">
-            <a href="/notes?filter=all" <#if filter == "all">style="background-color: #74b9ff; color: #2d3436;"</#if>>Все</a>
-            <a href="/notes?filter=completed" <#if filter == "completed">style="background-color: #74b9ff; color: #2d3436;"</#if>>Выполненные</a>
-            <a href="/notes?filter=not_completed" <#if filter == "not_completed">style="background-color: #74b9ff; color: #2d3436;"</#if>>Не выполненные</a>
+            <a href="/abstracts?filter=all" <#if filter == "all">style="background-color: #74b9ff; color: #2d3436;"</#if>>Все</a>
+            <a href="/abstracts?filter=completed" <#if filter == "completed">style="background-color: #74b9ff; color: #2d3436;"</#if>>Закончено</a>
+            <a href="/abstracts?filter=not_completed" <#if filter == "not_completed">style="background-color: #74b9ff; color: #2d3436;"</#if>>В процессе</a>
         </div>
 
-        <a href="/notes/create" class="btn btn-primary btn-create">Create New Note</a>
+        <a href="/abstracts/create" class="btn btn-primary btn-create">Начать новый конспект</a>
 
         <#if _csrf??>
             <input type="hidden" name="${(_csrf.parameterName)!'csrf'}" value="${(_csrf.token)!'--no-token--'}"/>
@@ -213,14 +213,14 @@
                 <div class="col-md-4 mb-4">
                     <div class="note-card p-4 border rounded shadow-sm">
                         <h3 class="note-title">
-                            <a href="/notes/${note.id}/edit" class="text-decoration-none text-dark">${note.title}</a>
+                            <a href="/abstracts/${note.id}/edit" class="text-decoration-none text-dark">${note.title}</a>
                         </h3>
 
-<#--                        <p class="description">${note.content}</p>-->
+                        <a href="/abstracts/${note.id}/content" class="btn btn-dark-theme m-2">конспект</a>
                         <p>Создано: ${note.createdDateAsString}</p>
-                        <p>Статус: ${note.completed?string("Выполнено", "Не выполнено")}</p>
+                        <p>Статус: ${note.completed?string("Закончено", "В процессе")}</p>
 
-                        <form method="post" action="/notes/${note.id}/toggleCompleted">
+                        <form method="post" action="/abstracts/${note.id}/toggleCompleted">
                             <#if _csrf??>
                                 <input type="hidden" name="${(_csrf.parameterName)!'csrf'}" value="${(_csrf.token)!'--no-token--'}"/>
                             </#if>
@@ -230,7 +230,7 @@
                         </form>
 
                         <div class="note-actions mt-3">
-                            <form action="/notes/${note.id}/delete" method="post">
+                            <form action="/abstracts/${note.id}/delete" method="post">
                                 <#if _csrf??>
                                     <input type="hidden" name="${(_csrf.parameterName)!'csrf'}" value="${(_csrf.token)!'--no-token--'}"/>
                                 </#if>

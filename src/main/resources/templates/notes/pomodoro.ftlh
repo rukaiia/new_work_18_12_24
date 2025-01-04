@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pomodoro Timer</title>
         <style>
-            /* Основной стиль страницы */
             body {
                 font-family: 'Roboto', sans-serif;
                 background: linear-gradient(135deg, #74ebd5, #acb6e5);
@@ -42,10 +41,9 @@
             }
 
 
-            /* Контейнер для таймера */
             .timer-container {
                 background: rgba(255, 255, 255, 0.9);
-                backdrop-filter: blur(10px); /* Размытие фона */
+                backdrop-filter: blur(10px);
                 padding: 40px;
                 border-radius: 20px;
                 box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -78,7 +76,6 @@
                 }
             }
 
-            /* Кнопки управления */
             .buttons button {
                 background: linear-gradient(135deg, #16a085, #1abc9c);
                 color: white;
@@ -102,7 +99,6 @@
                 box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
             }
 
-            /* Настройки */
             .settings-container {
                 background: rgba(255, 255, 255, 0.8);
                 backdrop-filter: blur(10px);
@@ -160,7 +156,6 @@
                 transform: scale(0.95);
             }
 
-            /* Адаптивность */
             @media (max-width: 600px) {
                 .timer-display {
                     font-size: 4rem;
@@ -210,9 +205,9 @@
     </div>
 
     <script>
-        let minutes = ${minutes};  // Данные из модели (начальное количество минут)
-        let seconds = ${seconds};  // Начальные секунды
-        let timeLeft = minutes * 60; // Время в секундах
+        let minutes = ${minutes};
+        let seconds = ${seconds};
+        let timeLeft = minutes * 60;
         let timer;
 
         function formatWithLeadingZero(number) {
@@ -252,5 +247,8 @@
         }
     </script>
     </body>
+    <footer>
+        <p>&copy; 2024 Notion. All rights reserved.</p>
+    </footer>
     </html>
 </@layout.layout>

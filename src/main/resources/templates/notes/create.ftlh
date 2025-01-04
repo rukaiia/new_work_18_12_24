@@ -1,3 +1,4 @@
+
 <#import "../layout.ftlh" as main>
 <@main.layout>
     <html lang="en">
@@ -8,9 +9,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
             body {
-                background: linear-gradient(135deg, #2c3e50, #34495e); /* Градиент от темно-синего к темно-серому */
+                background: linear-gradient(135deg, #2c3e50, #34495e);
                 font-family: 'Segoe UI', sans-serif;
-                color: #ecf0f1; /* Светлый текст */
+                color: #ecf0f1;
                 margin: 0;
                 padding: 0;
             }
@@ -89,6 +90,7 @@
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             }
 
+
             @media (max-width: 768px) {
                 .container {
                     padding: 20px;
@@ -107,14 +109,14 @@
     </head>
     <body>
     <div class="container mt-5">
-        <h1>Create New Note</h1>
-        <form action="/notes" method="post">
+        <h1>Create New Abstract</h1>
+        <form action="/abstracts" method="post">
             <#if _csrf??>
                 <input type="hidden" name="${(_csrf.parameterName)!'csrf'}"
                        value="${(_csrf.token)!'--no-token--'}"/>
             </#if>
             <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
+                <label for="title" class="form-label">Предмет</label>
                 <input type="text" id="title" name="title" class="form-control" required>
             </div>
             <div class="mb-3">

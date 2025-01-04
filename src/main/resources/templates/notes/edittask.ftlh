@@ -104,8 +104,8 @@
 
     <body>
     <div class="container mt-5">
-        <h1>Edit Abstract</h1>
-        <form action="/abstracts/${note.id}" method="post">
+        <h1>Edit Note</h1>
+        <form action="/notes/${note.id}" method="post">
             <#if _csrf??>
                 <input type="hidden" name="${(_csrf.parameterName)!'csrf'}"
                        value="${(_csrf.token)!'--no-token--'}"/>

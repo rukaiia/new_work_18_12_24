@@ -109,6 +109,8 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="/notes">Notion</a>
             <a href="/pomodoro" class="btn btn-dark-theme m-2">Pomodoro</a>
+            <a href="/abstracts" class="btn btn-dark-theme m-2">Abstracts</a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">

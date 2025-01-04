@@ -73,13 +73,13 @@ public class NoteService {
         noteRepository.save(note);
     }
 
-    public Note getById(Long noteId) {
-        Optional<Note> noteOptional = noteRepository.findById(noteId);
-        if (noteOptional.isPresent()) {
-            return noteOptional.get();
-        } else {
-            throw new IllegalArgumentException("Заметка не найдена");
-        }
-    }
+//    public Note getById(Long noteId) {
+//        Optional<Note> noteOptional = noteRepository.findById(noteId);
+//        if (noteOptional.isPresent()) {
+//            return noteOptional.get();
+//        } else {
+//            throw new IllegalArgumentException("Заметка не найдена");
+//        }
+//    }
 }
 
